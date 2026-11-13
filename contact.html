@@ -1,0 +1,31 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>تواصل معنا | أفق</title></head><body>
+<div id="hdr"></div><main>
+<div class="phead"><div class="wrap"><h1><span class="ar">تواصل معنا / اطلب خدمة</span><span class="en">Contact / Request a service</span></h1></div></div>
+<div class="wrap contact-grid">
+<div class="panel">
+<h2 style="color:var(--navy)"><span class="ar">طلب خدمة</span><span class="en">Service request</span></h2>
+<p class="sub" style="color:var(--mute)"><span class="ar">عند الإرسال يفتح واتساب برسالة جاهزة بطلبك.</span><span class="en">Sending opens WhatsApp with your request ready.</span></p>
+<form id="rf">
+<label><span class="ar">الاسم</span><span class="en">Name</span></label><input type="text" id="rn" required>
+<label><span class="ar">نوع الخدمة</span><span class="en">Service</span></label><select id="rs"></select>
+<label><span class="ar">وصف الطلب</span><span class="en">Details</span></label><textarea id="rd" required></textarea>
+<label><span class="ar">وسيلة التواصل المفضلة</span><span class="en">Preferred contact</span></label>
+<select id="rc"><option value="واتساب">WhatsApp</option><option value="اتصال هاتفي">Phone call</option><option value="بريد إلكتروني">Email</option></select>
+<div class="note"><span class="ar">الملفات المرفقة: أرسلها داخل محادثة واتساب بعد فتحها.</span><span class="en">Attachments: send your files inside the WhatsApp chat after it opens.</span></div>
+<button class="btn gold" type="submit"><span class="ar">أرسل الطلب عبر واتساب</span><span class="en">Send via WhatsApp</span></button>
+</form></div>
+<div class="panel ch"><h2 style="color:var(--navy);margin-bottom:8px"><span class="ar">قنوات التواصل</span><span class="en">Channels</span></h2><div id="chl"></div></div>
+</div></main><div id="ftr"></div>
+<script src="js/config.js"></script><script src="js/main.js"></script>
+<script>
+layout('contact');
+const sel=$('#rs');
+sel.innerHTML=SERVICES.map(s=>'<option value="'+s.k+'" data-ar="'+s.ar+'">'+s.ar+' / '+s.en+'</option>').join('')+'<option value="other" data-ar="أخرى">أخرى / Other</option>';
+const p=new URLSearchParams(location.search).get('s'); if(p) sel.value=p;
+$('#rf').onsubmit=e=>{e.preventDefault();
+  const svc=sel.options[sel.selectedIndex].dataset.ar;
+  const m='مرحباً أفق، أود طلب خدمة.\nالاسم: '+$('#rn').value+'\nالخدمة: '+svc+'\nالتفاصيل: '+$('#rd').value+'\nوسيلة التواصل: '+$('#rc').value;
+  window.open(waLink(m),'_blank');};
+const ch=[['واتساب','WhatsApp','https://wa.me/'+OFUQ.whatsapp,'+'+OFUQ.whatsapp],['فيسبوك','Facebook',OFUQ.facebook,'↗'],['تيك توك','TikTok',OFUQ.tiktok,'↗'],['البريد الإلكتروني','Email',OFUQ.email&&'mailto:'+OFUQ.email,OFUQ.email]].filter(c=>c[2]);
+$('#chl').innerHTML=ch.map(c=>'<a href="'+c[2]+'" target="_blank" rel="noopener"><span><span class="ar">'+c[0]+'</span><span class="en">'+c[1]+'</span></span><span dir="ltr">'+c[3]+'</span></a>').join('');
+</script></body></html>

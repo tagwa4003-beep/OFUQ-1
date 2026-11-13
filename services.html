@@ -1,0 +1,10 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>الخدمات | أفق</title></head><body>
+<div id="hdr"></div><main>
+<div class="phead"><div class="wrap"><h1><span class="ar">الخدمات</span><span class="en">Services</span></h1><p><span class="ar">كل ما يحتاجه الطلاب والمعلمون والمؤسسات وأصحاب المشاريع.</span><span class="en">Everything students, teachers, organizations and businesses need.</span></p></div></div>
+<section class="sec"><div class="wrap">
+<form class="search" style="margin-bottom:28px;box-shadow:none;border:1px solid var(--line)" onsubmit="event.preventDefault()"><input type="search" data-ph-ar="ابحث في الخدمات" data-ph-en="Search services" oninput="filterCards(this.value)"></form>
+<div class="grid" id="svc-grid"></div>
+<p class="noresult" id="noresult"><span class="ar">لا توجد نتائج.</span><span class="en">No results.</span></p>
+</div></section></main><div id="ftr"></div>
+<script src="js/config.js"></script><script src="js/main.js"></script>
+<script>layout('services');serviceCards('#svc-grid');</script></body></html>

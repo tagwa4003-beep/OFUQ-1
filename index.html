@@ -1,0 +1,84 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>أفق للخدمات الإلكترونية | OFUQ Digital Services</title>
+<meta name="description" content="خدمات رقمية وتعليمية وأكاديمية وأدوات مجانية ومساعد ذكي في مكان واحد"></head><body>
+<div id="hdr"></div>
+<main>
+<section class="hero">
+  <svg class="arcs" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g fill="none" stroke="#E8CF82">
+      <circle cx="600" cy="600" r="220" stroke-opacity=".35"/>
+      <circle cx="600" cy="600" r="340" stroke-opacity=".22"/>
+      <circle cx="600" cy="600" r="470" stroke-opacity=".14"/>
+      <circle cx="600" cy="600" r="610" stroke-opacity=".08"/>
+    </g>
+    <rect x="0" y="598" width="1200" height="2" fill="#E8CF82" opacity=".6"/>
+  </svg>
+  <div class="wrap">
+    <div>
+      <h1><span class="ar">كل خدماتك الرقمية<br>في مكان واحد.</span><span class="en">All your digital services<br>in one place.</span></h1>
+      <p class="lead"><span class="ar">اطلب خدمة من فريق أفق، أو أنجز عملك بنفسك بأدوات مجانية تعمل داخل متصفحك دون رفع ملفاتك لأي خادم.</span><span class="en">Order a service from the OFUQ team, or do the work yourself with free tools that run in your browser — your files never leave your device.</span></p>
+      <form class="search" onsubmit="event.preventDefault();filterCards(this.q.value);document.getElementById('services').scrollIntoView()">
+        <input name="q" type="search" data-ph-ar="ابحث عن خدمة: دمج PDF، سيرة ذاتية، عرض تقديمي..." data-ph-en="Search: merge PDF, CV, presentation..." placeholder="ابحث عن خدمة" oninput="filterCards(this.value)" aria-label="search">
+        <button><span class="ar">بحث</span><span class="en">Search</span></button>
+      </form>
+      <div class="cta">
+        <a class="btn gold lg" href="contact.html"><span class="ar">اطلب خدمة</span><span class="en">Request a service</span></a>
+        <a class="btn ghost lg" href="tools.html"><span class="ar">الأدوات المجانية</span><span class="en">Free tools</span></a>
+      </div>
+    </div>
+    <div class="glass">
+      <h3><span class="ar">ابدأ فوراً بأداة مجانية</span><span class="en">Start instantly with a free tool</span></h3>
+      <div class="tiles-h" id="hero-tiles"></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust"><div class="wrap">
+  <div><span id="t1"></span><span><b><span class="ar">ملفاتك على جهازك</span><span class="en">Files stay on your device</span></b><span class="s"><span class="ar">المعالجة داخل المتصفح</span><span class="en">Processed in your browser</span></span></span></div>
+  <div><span id="t2"></span><span><b><span class="ar">مجاناً بلا اشتراكات</span><span class="en">Free, no subscriptions</span></b><span class="s"><span class="ar">أدوات ومساعد ذكي</span><span class="en">Tools and AI assistant</span></span></span></div>
+  <div><span id="t3"></span><span><b><span class="ar">عربي وإنجليزي</span><span class="en">Arabic & English</span></b><span class="s"><span class="ar">دعم كامل للعربية RTL</span><span class="en">Full RTL support</span></span></span></div>
+  <div><span id="t4"></span><span><b><span class="ar">يعمل على كل الأجهزة</span><span class="en">Works on every device</span></b><span class="s"><span class="ar">هاتف وتابلت ولابتوب</span><span class="en">Phone, tablet and laptop</span></span></span></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="head"><span class="bar-g"></span><h2><span class="ar">ثلاث طرق للإنجاز</span><span class="en">Three ways to get it done</span></h2><p><span class="ar">اختر ما يناسبك: فريق ينفذ، أو أدوات تستخدمها بنفسك، أو مساعد ذكي يكتب معك.</span><span class="en">A team that delivers, tools you use yourself, or an AI that writes with you.</span></p></div>
+  <div class="paths">
+    <a class="path" href="services.html"><div class="big" id="p1"></div><h3><span class="ar">الخدمات الإلكترونية</span><span class="en">Services</span></h3><p><span class="ar">تنسيق بحوث، تصميم، برمجة، تحليل بيانات. تطلبها ويُنفذها فريق أفق.</span><span class="en">Research formatting, design, development, data. Ordered and delivered by our team.</span></p><b><span class="ar">استعرض الخدمات</span><span class="en">Browse services</span></b></a>
+    <a class="path" href="tools.html"><div class="big" id="p2"></div><h3><span class="ar">أدوات أفق المجانية</span><span class="en">Free Tools</span></h3><p><span class="ar">دمج وتقسيم PDF، صور إلى PDF، نص إلى Word، OCR، QR، عروض PowerPoint.</span><span class="en">Merge/split PDF, images to PDF, text to Word, OCR, QR, PowerPoint.</span></p><b><span class="ar">افتح الأدوات</span><span class="en">Open tools</span></b></a>
+    <a class="path" href="assistant.html"><div class="big" id="p3"></div><h3><span class="ar">مساعد أفق الذكي</span><span class="en">OFUQ AI</span></h3><p><span class="ar">كتابة وتلخيص وإعداد امتحانات وتقارير. يعمل على جهازك دون اشتراكات.</span><span class="en">Writing, summaries, exams, reports. Runs on your device with no subscription.</span></p><b><span class="ar">ابدأ المحادثة</span><span class="en">Start chatting</span></b></a>
+  </div>
+</div></section>
+
+<section class="sec alt" id="services"><div class="wrap">
+  <div class="head"><span class="bar-g"></span><h2><span class="ar">خدماتنا</span><span class="en">Our services</span></h2><p><span class="ar">اختر القسم المناسب واضغط «اطلب الخدمة» لإرسال طلبك مباشرة عبر واتساب.</span><span class="en">Pick a category and press “Request” to send your order via WhatsApp.</span></p></div>
+  <div class="grid" id="svc-grid"></div>
+  <p class="noresult" id="noresult"><span class="ar">لا توجد نتائج. جرّب كلمة أخرى أو <a href="contact.html" style="text-decoration:underline">اكتب لنا طلبك</a>.</span><span class="en">No results. Try another word or <a href="contact.html" style="text-decoration:underline">send us your request</a>.</span></p>
+</div></section>
+
+<section class="sec dark"><div class="wrap">
+  <div class="head"><span class="bar-g"></span><h2><span class="ar">أدوات أفق المجانية</span><span class="en">OFUQ Free Tools</span></h2><p><span class="ar">افتح الأداة، اختر ملفك، ونزّل النتيجة. لا تسجيل ولا رسوم.</span><span class="en">Open a tool, pick your file, download the result. No sign-up, no fees.</span></p></div>
+  <div class="tiles" id="tool-tiles"></div>
+  <div class="row" style="margin-top:28px"><a class="btn gold" href="tools.html"><span class="ar">كل الأدوات</span><span class="en">All tools</span></a></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="head"><span class="bar-g"></span><h2><span class="ar">كيف نعمل؟</span><span class="en">How it works</span></h2></div>
+  <div class="steps">
+    <div class="step"><h3><span class="ar">اختر الخدمة</span><span class="en">Choose a service</span></h3><p><span class="ar">حدد القسم الذي تحتاجه من قائمة الخدمات.</span><span class="en">Pick the category you need from the list.</span></p></div>
+    <div class="step"><h3><span class="ar">أرسل طلبك</span><span class="en">Send your request</span></h3><p><span class="ar">اكتب التفاصيل ويصلنا طلبك عبر واتساب برسالة جاهزة.</span><span class="en">Add details and your request reaches us on WhatsApp.</span></p></div>
+    <div class="step"><h3><span class="ar">استلم عملك</span><span class="en">Receive your work</span></h3><p><span class="ar">نتواصل معك لتأكيد التفاصيل ثم نسلّمك الناتج النهائي.</span><span class="en">We confirm the details with you, then deliver the final result.</span></p></div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="band"><div><h2><span class="ar">عندك فكرة أو مشروع؟ خلّينا ننفذه معاً.</span><span class="en">Have an idea or project? Let's build it together.</span></h2><p><span class="ar">راسلنا الآن وسنرد عليك بأقرب وقت.</span><span class="en">Message us now and we'll reply as soon as possible.</span></p></div>
+  <a class="btn gold lg" href="contact.html"><span class="ar">تواصل عبر واتساب</span><span class="en">Contact on WhatsApp</span></a></div>
+</div></section>
+</main>
+<div id="ftr"></div>
+<script src="js/config.js"></script><script src="js/main.js"></script>
+<script>
+layout('home');serviceCards('#svc-grid');toolTiles('#tool-tiles',8);toolTiles('#hero-tiles',6,true);
+[['t1','shield'],['t2','zap'],['t3','globe'],['t4','chat']].forEach(([id,i])=>$('#'+id).outerHTML=ic(i));
+$('#p1').innerHTML=ic('building');$('#p2').innerHTML=ic('file');$('#p3').innerHTML=ic('ai');
+</script>
+</body></html>

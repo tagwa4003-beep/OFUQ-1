@@ -1,2 +1,14 @@
-# OFUQ-1
-OFUQ ELECTRONIC SERVICES
+# أفق للخدمات الإلكترونية — OFUQ
+
+موقع ثابت (HTML/CSS/JS) بلا خادم ولا تكاليف.
+
+## التجربة محلياً
+افتح `index.html` في Chrome أو Edge. (الأدوات تحتاج إنترنت لتحميل المكتبات.)
+
+## تعديل بياناتك
+افتح `js/config.js` وضع رقم واتساب (بالصيغة الدولية) وروابط فيسبوك وتيك توك والبريد.
+
+## النشر المجاني
+- Cloudflare Pages: Create project > Direct Upload > ارفع هذا المجلد.
+- أو GitHub Pages: ارفع الملفات لمستودع، ثم Settings > Pages.
+تحصل على رابط عام مجاني مثل `https://اسم-مشروعك.pages.dev`.
